@@ -55,7 +55,7 @@ public class MyArrayList<T> implements Iterable<T>{
         if (theItems.length == size()) {
             ensureCapacity(size() * 2 + 1);
         }
-        for (int i = idx; i < size() - 1; i++ ) {
+        for (int i = theSize; i > idx; i-- ) {
             theItems[i] = theItems[i-1];
          }
         theItems[idx] = val;
